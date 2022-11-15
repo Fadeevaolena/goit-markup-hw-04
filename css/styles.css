@@ -13,7 +13,8 @@
     0px 2px 1px rgba(0, 0, 0, 0.2);
   --portfolio-link-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
-  --but-portfolio-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+  --but-portfolio-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 body {
   font-family: Roboto, sans-serif;
@@ -135,23 +136,22 @@ img {
 .header-link:focus {
   color: var(--effect-color);
 }
-/* ---------------HERO-------------- */
 .section {
   padding-top: 94px;
   padding-bottom: 94px;
 }
+/* ---------------HERO-------------- */
 .hero {
   background: var(--background-gray);
   padding-top: 200px;
   padding-bottom: 200px;
   max-width: 1600px;
   height: 600px;
-  margin-left: 0 auto;
-  margin-right: 0 auto;
+  margin: 0 auto;
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
     url(../images/hero_img.jpg);
-  background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
 }
 .hero-container {
   text-align: center;
@@ -308,7 +308,8 @@ img {
 .team-soc-link:focus {
   background-color: var(--effect-color);
 }
-.team-soc-link:hover .team-soc-icon {
+.team-soc-link:hover .team-soc-icon,
+.team-soc-link:focus .team-soc-icon {
   fill: var(--titel-white);
 }
 /* -------------------OUR CLIENTS--------------- */
@@ -335,9 +336,11 @@ img {
 .clients-link:focus {
   border-color: var(--effect-color);
 }
-.clients-link:hover .clients-icon {
+.clients-link:hover .clients-icon,
+.clients-link:focus .clients-icon {
   fill: var(--effect-color);
 }
+
 /* ------------PORTFOLIO----------------- */
 
 .menu-list {
@@ -360,7 +363,7 @@ img {
   border: none;
 }
 .menu-btn:hover,
-.menu-btn:focus{
+.menu-btn:focus {
   color: var(--titel-white);
   background: var(--effect-color);
   box-shadow: var(--but-portfolio-shadow);
@@ -394,8 +397,8 @@ img {
 }
 
 .example-item:hover,
-.example-item:focus{
-  box-shadow:var(--portfolio-link-shadow);
+.example-item:focus {
+  box-shadow: var(--portfolio-link-shadow);
 }
 
 /* -----------------FOOTER----------------- */
@@ -467,6 +470,6 @@ img {
   fill: var(--titel-white);
 }
 .footer-link:hover,
-.footer-link:focus{
+.footer-link:focus {
   background-color: var(--effect-color);
 }
